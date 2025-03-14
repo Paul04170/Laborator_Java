@@ -1,4 +1,4 @@
-//package ro.ulbs.paradigme.lab2;
+package LAB2;//package ro.ulbs.paradigme.lab2;
 
 class Form {
     private String color;
@@ -44,7 +44,7 @@ class Triangle extends Form {
 
     @Override
     public String toString() {
-        return super.toString() + ", Triangle with height " + height + " and base " + base;
+        return super.toString() + ", LAB2.Triangle with height " + height + " and base " + base;
     }
 
     @Override
@@ -76,7 +76,7 @@ class Circle extends Form {
 
     @Override
     public String toString() {
-        return super.toString() + ", Circle with radius " + radius;
+        return super.toString() + ", LAB2.Circle with radius " + radius;
     }
 }
 
@@ -100,7 +100,7 @@ class Square extends Form {
 
     @Override
     public String toString() {
-        return super.toString() + ", Square with side " + side;
+        return super.toString() + ", LAB2.Square with side " + side;
     }
 }
 
