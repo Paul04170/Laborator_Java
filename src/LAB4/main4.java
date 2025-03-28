@@ -1,8 +1,7 @@
 package LAB4;
 
 import java.util.*;
-
-public class main4 {
+ class ListOperations {
     public static void main(String[] args) {
         Random rand = new Random();
 
@@ -25,5 +24,30 @@ public class main4 {
         List<Integer> xPlusY = new ArrayList<>(x);
         xPlusY.addAll(y);
         Collections.sort(xPlusY);
+
+        // b) zSet - conține numai valorile comune din x și y, fără duplicate
+        Set<Integer> zSet = new TreeSet<>(x);
+        zSet.retainAll(y);
+
+        // c) xMinusY - conține valorile din x care nu sunt în y
+        List<Integer> xMinusY = new ArrayList<>(x);
+        xMinusY.removeAll(y);
+
+        // d) xPlusYLimitedByP - elementele din x și y ce nu depășesc valoarea p
+        int p = 4;
+        List<Integer> xPlusYLimitedByP = new ArrayList<>();
+        for (int num : xPlusY) {
+            if (num <= p) {
+                xPlusYLimitedByP.add(num);
+            }
+        }
+
+        // Afișare rezultate
+        System.out.println("Lista x: " + x);
+        System.out.println("Lista y: " + y);
+        System.out.println("xPlusY: " + xPlusY);
+        System.out.println("zSet: " + zSet);
+        System.out.println("xMinusY: " + xMinusY);
+        System.out.println("xPlusYLimitedByP: " + xPlusYLimitedByP);
     }
 }
