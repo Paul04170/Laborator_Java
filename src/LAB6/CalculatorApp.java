@@ -2,12 +2,22 @@ package LAB6;
 
 public class CalculatorApp {
     public static void main(String[] args) {
-        NewIntCalculator intCalc = new NewIntCalculator(10);
-        int intResult = intCalc.add(5).subtract(3).multiply(2).result();
-        System.out.println("a) " + intResult);
+        // Creăm obiecte de tip NewIntCalculator și DoubleCalculator
+        NewIntCalculator intCalculator = new NewIntCalculator();
+        DoubleCalculator doubleCalculator = new DoubleCalculator();
 
-        DoubleCalculator doubleCalc = new DoubleCalculator(10.0);
-        double doubleResult = doubleCalc.add(5).subtract(3.3).multiply(2.2).result();
-        System.out.println("b) " + doubleResult);
-}
+        // Operațiile pentru int: (10 + 5 - 3) * 2
+        intCalculator.add(10);
+        intCalculator.add(5);
+        intCalculator.subtract(3);
+        intCalculator.multiply(2);
+        System.out.println("Rezultatul pentru int: " + intCalculator.result());  // Așteptat: 24
+
+        // Operațiile pentru double: (10 + 5 - 3.3) * 2.2
+        doubleCalculator.add(10);
+        doubleCalculator.add(5);
+        doubleCalculator.subtract(3.3);
+        doubleCalculator.multiply(2.2);
+        System.out.println("Rezultatul pentru double: " + doubleCalculator.result());  // Așteptat: 25.94
+    }
 }

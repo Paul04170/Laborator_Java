@@ -1,29 +1,30 @@
 package LAB6;
 
-class DoubleCalculator extends ACalculator<Double> {
+class DoubleCalculator extends ACalculator {
 
-    public DoubleCalculator(Double initialValue) {
-        super(initialValue);
+    // Constructor
+    public DoubleCalculator() {
+        init(); // Inițializare
     }
 
+    // Implementarea metodei init pentru a inițializa starea cu 0.0
     @Override
-    public DoubleCalculator init(Double value) {
-        this.state = value;
-        return this;
+    public void init() {
+        state = 0.0; // Setăm starea la 0.0 (tip Double)
     }
 
-    public DoubleCalculator add(double value) {
-        this.state += value;
-        return this;
+    // Metodă pentru adunare
+    public void add(double value) {
+        state = (Double) state + value;
     }
 
-    public DoubleCalculator subtract(double value) {
-        this.state -= value;
-        return this;
+    // Metodă pentru scădere
+    public void subtract(double value) {
+        state = (Double) state - value;
     }
 
-    public DoubleCalculator multiply(double value) {
-        this.state *= value;
-        return this;
+    // Metodă pentru înmulțire
+    public void multiply(double value) {
+        state = (Double) state * value;
     }
 }

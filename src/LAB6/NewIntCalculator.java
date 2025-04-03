@@ -1,29 +1,29 @@
 package LAB6;
+class NewIntCalculator extends ACalculator {
 
-class NewIntCalculator extends ACalculator<Integer> {
-
-    public NewIntCalculator(Integer initialValue) {
-        super(initialValue);
+    // Constructor
+    public NewIntCalculator() {
+        init(); // Inițializare
     }
 
+    // Implementarea metodei init pentru a inițializa starea cu 0
     @Override
-    public NewIntCalculator init(Integer value) {
-        this.state = value;
-        return this;
+    public void init() {
+        state = 0; // Setăm starea la 0 (tip Integer)
     }
 
-    public NewIntCalculator add(int value) {
-        this.state += value;
-        return this;
+    // Metodă pentru adunare
+    public void add(int value) {
+        state = (Integer) state + value;
     }
 
-    public NewIntCalculator subtract(int value) {
-        this.state -= value;
-        return this;
+    // Metodă pentru scădere
+    public void subtract(int value) {
+        state = (Integer) state - value;
     }
 
-    public NewIntCalculator multiply(int value) {
-        this.state *= value;
-        return this;
+    // Metodă pentru înmulțire
+    public void multiply(int value) {
+        state = (Integer) state * value;
     }
 }

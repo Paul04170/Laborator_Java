@@ -1,20 +1,15 @@
 package LAB6;
 
-abstract class ACalculator<T extends Number> {
-    protected T state;
+abstract class ACalculator {
+    protected Object state;
 
-    public ACalculator(T initialValue) {
-        this.state = initialValue;
-    }
-
-    public abstract ACalculator<T> init(T value);
-
-    public T result() {
+    public Object result() {
         return state;
     }
 
-    public ACalculator<T> clear() {
-        this.state = null;
-        return this;
+    public void clear() {
+        state = null;
     }
+
+    public abstract void init();
 }
